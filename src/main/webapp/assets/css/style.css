@@ -1,0 +1,183 @@
+/* 1. GLOBAL E RESET */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #F8F9FA;
+    overflow-x: hidden; /* Trava o scroll lateral */
+    width: 100%;
+}
+
+/* 2. NAVBAR (ESTILOS E CORES) */
+.custom-nav {
+    background-color: #0c795a !important;
+    padding: 0.8rem 1rem !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem !important;
+    font-weight: bold;
+}
+
+/* Restaurando Links da Nav e Hover */
+.custom-nav .nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: 0.3s;
+}
+
+.custom-nav .nav-link:hover, .custom-nav .nav-link.active {
+    color: #FFFFFF !important;
+    transform: translateY(-1px);
+}
+
+/* 3. BUSCA E LOGIN (RESPONSIVIDADE) */
+.search-input {
+    border: 1px solid #D8F3DC !important;
+    border-radius: 20px !important;
+    background-color: #FFFFFF !important;
+    width: 100%;
+    max-width: 250px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(45, 106, 79, 0.25) !important;
+    outline: none;
+}
+
+.btn-login-icon {
+    color: #D8F3DC;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.btn-login-icon:hover {
+    color: #FFFFFF;
+    transform: scale(1.1);
+}
+
+/* 4. CARDS DE MEDICAMENTOS (RESTAURADO) */
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.card-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.btn-primary-custom {
+    background-color: #2D6A4F;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background-color: #1B4332;
+    color: white;
+    box-shadow: 0 4px 12px rgba(45, 106, 79, 0.3);
+}
+
+/* 5. TABELAS E FORMULÁRIOS */
+.table-responsive {
+    border-radius: 15px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #dee2e6;
+}
+
+.table thead th {
+    background-color: #0c795a;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 1.2rem 0.75rem;
+}
+
+/* 6. MODAL DE LOGIN */
+.modal-content { border-radius: 15px; overflow: hidden; }
+.modal-body .form-control:focus {
+    border-color: #0c795a !important;
+    box-shadow: 0 0 0 0.25rem rgba(12, 121, 90, 0.15) !important;
+}
+
+/* 7. FOOTER (RESTAURADO) */
+.custom-footer { background-color: #0c795a; color: #D8F3DC; }
+.footer-bottom { background-color: #082b20; border-top: 1px solid rgba(255,255,255,0.1); }
+
+.footer-links a {
+    color: rgba(216, 243, 220, 0.7) !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF !important;
+    padding-left: 5px;
+}
+
+.custom-footer ul.list-unstyled li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #D8F3DC !important;
+}
+
+.custom-footer ul.list-unstyled li i {
+    color: #FFFFFF !important;
+    margin-right: 15px;
+    min-width: 20px;
+}
+
+/* Ícones Sociais no Footer */
+.social-links a {
+    color: #D8F3DC !important; /* Verde menta claro por padrão */
+    font-size: 1.4rem;           /* Aumenta o tamanho dos ícones */
+    transition: 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #FFFFFF !important;   /* Fica branco puro no hover */
+    transform: translateY(-5px); /* Efeito de flutuar ao passar o mouse */
+}
+
+/* 8. MEDIA QUERIES (AJUSTES FINAIS MOBILE) */
+@media (max-width: 767px) {
+    .custom-nav { min-height: 60px; padding: 0.5rem !important; }
+    .navbar-brand { font-size: 1.1rem !important; }
+    .search-input { max-width: 140px !important; font-size: 0.85rem; }
+    .btn-login-icon { font-size: 1.5rem; }
+    .container { padding-left: 15px; padding-right: 15px; }
+    .social-links {
+        justify-content: left; /* Centraliza no celular para melhor UX */
+        margin-top: 15px;
+    }
+}
