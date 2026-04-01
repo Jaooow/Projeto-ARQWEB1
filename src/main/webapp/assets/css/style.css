@@ -27,6 +27,19 @@ html, body {
     font-weight: bold;
 }
 
+.logo-img {
+    height: 50px !important;    /* Altura fixa ideal para sua nav de 80px */
+    width: auto !important;      /* Ajusta a largura proporcionalmente */
+    max-width: 100%;             /* Impede que ela vaze em telas pequenas */
+    object-fit: contain;         /* Garante que a imagem não fique esticada */
+    display: block;
+}
+
+/* Efeito sutil ao passar o mouse na logo */
+.navbar-brand:hover .logo-img {
+    transform: scale(1.05);
+}
+
 /* Restaurando Links da Nav e Hover */
 .custom-nav .nav-link {
     font-size: 1.1rem;
@@ -179,5 +192,8 @@ html, body {
     .social-links {
         justify-content: left; /* Centraliza no celular para melhor UX */
         margin-top: 15px;
+    }
+    .logo-img {
+        height: 35px !important; /* Diminui a logo no celular para caber com a busca */
     }
 }

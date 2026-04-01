@@ -5,15 +5,16 @@
                 <div class="row g-4">
                     <!-- Coluna 1: Sobre / Logo -->
                     <div class="col-lg-4 col-md-6">
-                        <h5 class="fw-bold mb-3 text-white"><i class="bi bi-capsule-pill me-2"></i>Fármacos & Cia</h5>
+
+                        <h5 class="fw-bold mb-3 text-white"><br><i class="bi bi-capsule-pill me-2"></i>Fármacos & Cia</h5>
                         <p class="text-footer-muted">
                             Sistema de gerenciamento farmacêutico dedicado à organização, 
                             segurança e controle de medicamentos para profissionais da saúde.
                         </p>
                         <div class="social-links d-flex gap-3">
                             <a href="#"><i class="bi bi-instagram"></i></a>
-                            <a href="#"><i class="bi bi-linkedin"></i></a>
-                            <a href="#"><i class="bi bi-github"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="https://github.com/Jaooow/Projeto-ARQWEB1"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
 

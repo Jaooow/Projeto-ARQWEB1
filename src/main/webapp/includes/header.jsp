@@ -15,8 +15,10 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
                 <div class="container-fluid">
-                    <a class="navbar-brand fw-bold" href="#">
-                        <i class="bi bi-capsule-pill me-2"></i>Fármacos & Cia
+                    <!-- Esquerda: Logo com Imagem -->
+                    <a class="navbar-brand d-flex align-items-center" href="index.jsp">
+                        <img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="Logo Fármacos & Cia" class="logo-img me-2">
+                        <span>Fármacos & Cia</span>
                     </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
