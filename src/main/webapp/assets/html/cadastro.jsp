@@ -1,3 +1,9 @@
+<%
+    if(session.getAttribute("usuario") == null){
+        response.sendRedirect("error.jsp");
+    }
+%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -7,22 +13,22 @@
             <div class="col-lg-8">
                 <div class="card border-0 shadow-sm rounded-4">
                     <div class="card-header p-4 border-0" style="background-color: #0c795a; color: white; border-radius: 15px 15px 0 0;">
-                        <h4 class="mb-0"><i class="bi bi-plus-circle me-2"></i>Cadastrar Novo Medicamento</h4>
+                        <h4 class="mb-0"><i class="bi bi-plus-circle me-2"></i>Cadastrar Novo classes.Medicamento</h4>
                     </div>
                     <div class="card-body p-4">
                         <!-- O action apontará para sua Servlet futuramente -->
-                        <form action="SalvarMedicamentoServlet" method="POST">
+                        <form action="${pageContext.request.contextPath}/medicamento" method="post">
                             <div class="row g-3">
                                 <!-- Nome Comercial -->
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold">Nome Comercial</label>
-                                    <input type="text" name="nomeComercial" class="form-control" placeholder="Ex: Amoxicilina" required>
+                                    <input type="text" name="nome" class="form-control" placeholder="Ex: Amoxicilina" required>
                                 </div>
 
                                 <!-- Princípio Ativo -->
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold">Princípio Ativo</label>
-                                    <input type="text" name="principioAtivo" class="form-control" placeholder="Ex: Amoxicilina Tri-hidratada" required>
+                                    <input type="text" name="principio" class="form-control" placeholder="Ex: Amoxicilina Tri-hidratada" required>
                                 </div>
 
                                 <!-- Fabricante -->
@@ -40,7 +46,7 @@
                                 <!-- Forma Farmacêutica -->
                                 <div class="col-md-4">
                                     <label class="form-label fw-bold">Forma Farmacêutica</label>
-                                    <select name="formaFarmaceutica" class="form-select">
+                                    <select name="forma" class="form-select">
                                         <option value="Comprimido">Comprimido</option>
                                         <option value="Cápsula">Cápsula</option>
                                         <option value="Solução">Solução/Xarope</option>
@@ -57,7 +63,7 @@
                                 <!-- Data de Validade -->
                                 <div class="col-md-4">
                                     <label class="form-label fw-bold">Data de Validade</label>
-                                    <input type="date" name="dataValidade" class="form-control" required>
+                                    <input type="date" name="validade" class="form-control" required>
                                 </div>
 
                                 <!-- Indicação -->
@@ -68,12 +74,18 @@
 
                                 <!-- Botões -->
                                 <div class="col-12 d-flex gap-2 mt-4">
-                                    <button type="submit" class="btn btn-success px-5 rounded-pill fw-bold" style="background-color: #0c795a;">
+
+                                    <button type="submit"
+                                            class="btn btn-success px-5 rounded-pill fw-bold"
+                                            style="background-color: #0c795a;">
                                         Salvar Medicamento
                                     </button>
-                                    <a href="gerenciar.html" class="btn btn-outline-secondary px-5 rounded-pill">
+
+                                    <a href="${pageContext.request.contextPath}/medicamento?acao=listar"
+                                       class="btn btn-outline-secondary px-5 rounded-pill">
                                         Cancelar
                                     </a>
+
                                 </div>
                             </div>
                         </form>

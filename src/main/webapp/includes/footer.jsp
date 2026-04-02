@@ -73,44 +73,67 @@
         </footer>
 
         <!-- Modal de Login -->
-        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal fade" id="loginModal" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content border-0 shadow-lg">
-                <!-- Cabeçalho com cor da paleta -->
-                <div class="modal-header text-white" style="background-color: #2D6A4F;">
-                    <h5 class="modal-title fw-bold" id="loginModalLabel">
-                        <i class="bi bi-lock-fill me-2"></i>Acesso Restrito
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                
-                <div class="modal-body p-4">
-                    <form action="LoginServlet" method="POST">
-                        <div class="mb-3">
-                            <label for="email" class="form-label fw-semibold" style="color: #2D6A4F;">Usuário ou E-mail</label>
-                            <div class="input-group">
-                                <span class="input-group-text bg-light border-end-0"><i class="bi bi-person text-muted"></i></span>
-                                <input type="email" name="email" class="form-control border-start-0 bg-light" id="email" placeholder="nome@exemplo.com">
-                            </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="password" class="form-label fw-semibold" style="color: #2D6A4F;">Senha</label>
-                            <div class="input-group">
-                                <span class="input-group-text bg-light border-end-0"><i class="bi bi-key text-muted"></i></span>
-                                <input type="password" name="senha" class="form-control border-start-0 bg-light" id="password" placeholder="Digite sua senha">
-                            </div>
-                        </div>
 
-                        <button type="submit" class="btn w-100 fw-bold py-2 shadow-sm" style="background-color: #2D6A4F; color: white; transition: 0.3s;">
-                            Entrar no Sistema
-                        </button>
-                    </form>
-                </div>
-                
-                <div class="modal-footer justify-content-center border-0 bg-light">
-                    <small class="text-muted">Esqueceu sua senha? <a href="#" class="text-decoration-none" style="color: #2D6A4F;">Clique aqui</a></small>
-                </div>
+                    <div class="modal-header text-white" style="background-color: #2D6A4F;">
+                        <h5 class="modal-title fw-bold">
+                            <i class="bi bi-lock-fill me-2"></i>Acesso Restrito
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body p-4">
+
+                        <!-- ACTION -->
+                        <form action="${pageContext.request.contextPath}/login" method="POST">
+                            <!-- USUÁRIO -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold" style="color: #2D6A4F;">Usuário</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0">
+                                        <i class="bi bi-person text-muted"></i>
+                                    </span>
+
+                                    <input type="text" name="login"
+                                           class="form-control border-start-0 bg-light"
+                                           placeholder="Digite seu usuário" required>
+                                </div>
+                            </div>
+
+                            <!-- SENHA -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold" style="color: #2D6A4F;">Senha</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0">
+                                        <i class="bi bi-key text-muted"></i>
+                                    </span>
+
+                                    <input type="password" name="senha"
+                                           class="form-control border-start-0 bg-light"
+                                           placeholder="Digite sua senha" required>
+                                </div>
+                            </div>
+
+                            <button type="submit"
+                                    class="btn w-100 fw-bold py-2 shadow-sm"
+                                    style="background-color: #2D6A4F; color: white;">
+                                Entrar no Sistema
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer justify-content-center border-0 bg-light">
+                        <small class="text-muted">
+                            Esqueceu sua senha?
+                            <a href="#" class="text-decoration-none" style="color: #2D6A4F;">
+                                Clique aqui
+                            </a>
+                        </small>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -118,5 +141,6 @@
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
     </body>
 </html>

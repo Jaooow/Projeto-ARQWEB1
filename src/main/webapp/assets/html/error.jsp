@@ -26,7 +26,7 @@
 
                         <!-- Botões de Ação -->
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                            <a href="index.html" class="btn btn-success rounded-pill px-4 py-2 fw-bold" style="background-color: #0c795a;">
+                            <a href="${pageContext.request.contextPath}/index.jsp" class="btn btn-success rounded-pill px-4 py-2 fw-bold" style="background-color: #0c795a;">
                                 <i class="bi bi-house-door me-2"></i>Voltar para Home
                             </a>
                             <!-- Botão que abre o modal de login que já criamos -->
