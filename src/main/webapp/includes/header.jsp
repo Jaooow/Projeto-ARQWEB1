@@ -51,6 +51,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.request.contextPath}/medicamento?acao=listar">Gerenciar</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/assets/html/perfil.jsp">
+                            Meu Perfil
+                        </a>
+                    </li>
                     <%
                         }
                     %>

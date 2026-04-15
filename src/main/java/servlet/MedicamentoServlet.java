@@ -36,6 +36,27 @@ public class MedicamentoServlet extends HttpServlet {
                 request.getRequestDispatcher("/assets/html/gerenciar.jsp").forward(request, response);
                 break;
 
+            case "buscar":
+
+                String termo = request.getParameter("busca");
+
+                request.setAttribute("lista", MedicamentoDAO.buscar(termo));
+                request.setAttribute("busca", termo);
+
+                request.getRequestDispatcher("/index.jsp").forward(request, response);
+
+                break;
+
+            case "editar":
+                try {
+                    int id = Integer.parseInt(request.getParameter("id"));
+                    request.setAttribute("med", MedicamentoDAO.buscarPorId(id));
+                    request.getRequestDispatcher("/assets/html/editar.jsp").forward(request, response);
+                } catch (Exception e) {
+                    response.sendRedirect(request.getContextPath() + "/medicamento?acao=listar");
+                }
+                break;
+
             case "excluir":
                 try {
                     int id = Integer.parseInt(request.getParameter("id"));
@@ -67,6 +88,9 @@ public class MedicamentoServlet extends HttpServlet {
             throws ServletException, IOException {
 
         try {
+
+            String idParam = request.getParameter("id");
+
             String nome = request.getParameter("nome");
             String principio = request.getParameter("principio");
             String fabricante = request.getParameter("fabricante");
@@ -76,13 +100,32 @@ public class MedicamentoServlet extends HttpServlet {
             String dosagem = request.getParameter("dosagem");
             String forma = request.getParameter("forma");
 
-            Medicamento m = new Medicamento(
-                    nome, principio, fabricante,
-                    lote, validade, indicacao,
-                    dosagem, forma
-            );
+            if (idParam != null && !idParam.isEmpty()) {
 
-            MedicamentoDAO.adicionar(m);
+                int id = Integer.parseInt(idParam);
+
+                Medicamento m = MedicamentoDAO.buscarPorId(id);
+
+                if (m != null) {
+                    m.setNome(nome);
+                    m.setPrincipioAtivo(principio);
+                    m.setFabricante(fabricante);
+                    m.setLote(lote);
+                    m.setIndicacao(indicacao);
+                    m.setDosagem(dosagem);
+                    m.setForma(forma);
+                    m.setValidade(java.time.LocalDate.parse(validade));
+                }
+
+            } else {
+                Medicamento m = new Medicamento(
+                        nome, principio, fabricante,
+                        lote, validade, indicacao,
+                        dosagem, forma
+                );
+
+                MedicamentoDAO.adicionar(m);
+            }
 
         } catch (Exception e) {
             e.printStackTrace();

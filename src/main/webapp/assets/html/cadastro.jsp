@@ -13,7 +13,7 @@
             <div class="col-lg-8">
                 <div class="card border-0 shadow-sm rounded-4">
                     <div class="card-header p-4 border-0" style="background-color: #0c795a; color: white; border-radius: 15px 15px 0 0;">
-                        <h4 class="mb-0"><i class="bi bi-plus-circle me-2"></i>Cadastrar Novo classes.Medicamento</h4>
+                        <h4 class="mb-0"><i class="bi bi-plus-circle me-2"></i>Cadastrar Novo Medicamento</h4>
                     </div>
                     <div class="card-body p-4">
                         <!-- O action apontará para sua Servlet futuramente -->

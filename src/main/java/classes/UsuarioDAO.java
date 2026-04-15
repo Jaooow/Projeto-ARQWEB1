@@ -1,16 +1,33 @@
 package classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UsuarioDAO {
 
-    // USUÁRIO FIXO (ADMIN)
-    private static Usuario admin = new Usuario("admin", "123");
+    private static List<Usuario> usuarios = new ArrayList<>();
+
+    static {
+        usuarios.add(new Usuario("admin", "123"));
+    }
 
     public static Usuario autenticar(String login, String senha) {
 
-        if(admin.getLogin().equals(login) && admin.getSenha().equals(senha)){
-            return admin;
+        for (Usuario u : usuarios) {
+            if (u.getLogin().equals(login) && u.getSenha().equals(senha)) {
+                return u;
+            }
         }
 
+        return null;
+    }
+
+    public static Usuario buscar(String login) {
+        for (Usuario u : usuarios) {
+            if (u.getLogin().equals(login)) {
+                return u;
+            }
+        }
         return null;
     }
 }

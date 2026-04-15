@@ -4,6 +4,18 @@ import java.util.*;
 
 public class MedicamentoDAO {
 
+    public static List<Medicamento> buscar(String termo){
+        List<Medicamento> resultado = new ArrayList<>();
+
+        for(Medicamento m : lista){
+            if(m.getNome().toLowerCase().contains(termo.toLowerCase())){
+                resultado.add(m);
+            }
+        }
+
+        return resultado;
+    }
+
     private static List<Medicamento> lista = new ArrayList<>();
 
     public static void adicionar(Medicamento m) {

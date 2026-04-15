@@ -5,7 +5,11 @@
 <c:import url="/includes/header.jsp" />
 
 <%
-    List<Medicamento> lista = MedicamentoDAO.listar();
+    List<Medicamento> lista = (List<Medicamento>) request.getAttribute("lista");
+
+    if(lista == null){
+        lista = MedicamentoDAO.listar();
+    }
 %>
 
 <main class="container my-5 min-vh-100">
@@ -15,6 +19,16 @@
             <h2 class="fw-bold" style="color: #2D6A4F;">
                 Medicamentos em Destaque
             </h2>
+            <%
+                String termo = (String) request.getAttribute("busca");
+                if(termo != null){
+            %>
+            <p class="text-muted">
+                Resultados para: <strong><%= termo %></strong>
+            </p>
+            <%
+                }
+            %>
             <p class="text-muted">Confira os últimos lançamentos e promoções do dia.</p>
         </div>
 
@@ -88,7 +102,17 @@
         %>
 
         <div class="col-12 text-center text-muted">
+            <%
+                if(request.getAttribute("busca") != null){
+            %>
+            <p>Nenhum resultado encontrado para sua busca.</p>
+            <%
+            } else {
+            %>
             <p>Nenhum medicamento cadastrado ainda.</p>
+            <%
+                }
+            %>
         </div>
 
         <%

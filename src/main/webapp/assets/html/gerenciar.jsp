@@ -15,7 +15,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="fw-bold" style="color: #0c795a;">Gerenciar Medicamentos</h2>
 
-        <a href="cadastro.jsp" class="btn btn-success rounded-pill px-4 shadow-sm">
+        <a href="${pageContext.request.contextPath}/assets/html/cadastro.jsp" class="btn btn-success rounded-pill px-4 shadow-sm">
             <i class="bi bi-plus-lg me-2"></i>Novo Medicamento
         </a>
     </div>
