@@ -53,12 +53,12 @@
                     <td><%= m.getFabricante() %></td>
 
                     <!-- DATA FORMATADA -->
+
                     <td>
-                        <span class="badge bg-light text-dark border">
+                        <span class="badge <%= m.isVencido() ? "bg-danger" : "bg-light text-dark border" %>">
                             <%= m.getValidadeFormatada() %>
                         </span>
                     </td>
-
                     <td><%= m.getLote() %></td>
                     <td><%= m.getDosagem() %></td>
 

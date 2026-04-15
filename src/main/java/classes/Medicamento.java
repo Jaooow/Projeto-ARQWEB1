@@ -18,6 +18,8 @@ public class Medicamento implements Serializable {
     private LocalDate validade;
     private String indicacao;
 
+    private boolean promocao;
+
     // CONSTRUTOR PADRÃO
     public Medicamento() {
         this.id = ++idAtual;
@@ -27,7 +29,7 @@ public class Medicamento implements Serializable {
     public Medicamento(String nome, String principioAtivo, String fabricante,
                        String lote, String validade, String indicacao,
                        String dosagem, String forma) {
-
+        this();
         this.id = ++idAtual;
         this.nome = nome;
         this.principioAtivo = principioAtivo;
@@ -42,13 +44,22 @@ public class Medicamento implements Serializable {
         }
     }
 
-    // REGRA DE NEGÓCIO
+    // Verificacao se está vencido medicamento
     public boolean isVencido() {
         if (validade == null) return false;
         return validade.isBefore(LocalDate.now());
     }
 
     // GETTERS E SETTERS
+    public boolean isPromocao() {
+        return promocao;
+    }
+
+    public void setPromocao(boolean promocao) {
+        this.promocao = promocao;
+    }
+
+
     public int getId() {
         return id;
     }

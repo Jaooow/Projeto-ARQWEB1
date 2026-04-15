@@ -50,7 +50,6 @@
                                         <option value="Comprimido">Comprimido</option>
                                         <option value="Cápsula">Cápsula</option>
                                         <option value="Solução">Solução/Xarope</option>
-                                        <option value="Injetável">Injetável</option>
                                     </select>
                                 </div>
 

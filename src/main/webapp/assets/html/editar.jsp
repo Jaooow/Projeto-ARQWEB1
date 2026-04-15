@@ -6,6 +6,10 @@
 
 <%
     Medicamento m = (Medicamento) request.getAttribute("med");
+    if (m == null) {
+        response.sendRedirect(request.getContextPath() + "/medicamento?acao=listar");
+        return;
+    }
 %>
 
 <main class="container my-5">

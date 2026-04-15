@@ -17,6 +17,10 @@ public class LoginServlet extends HttpServlet {
         String login = request.getParameter("login");
         String senha = request.getParameter("senha");
 
+        // teste console
+        System.out.println("Login recebido: " + login);
+        System.out.println("Senha recebida: " + senha);
+
         Usuario user = UsuarioDAO.autenticar(login, senha);
 
         if(user != null){
