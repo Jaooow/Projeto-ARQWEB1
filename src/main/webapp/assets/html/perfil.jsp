@@ -15,55 +15,54 @@
     Usuario u = (Usuario) session.getAttribute("usuario");
 %>
 
+<%-- perfil.jsp --%>
 <main class="container my-5">
-
     <div class="row justify-content-center">
         <div class="col-lg-6">
-
             <div class="card border-0 shadow-lg rounded-4">
-
-                <!-- HEADER -->
                 <div class="card-header text-white text-center p-4"
                      style="background-color:#2D6A4F; border-radius:15px 15px 0 0;">
 
-                    <i class="bi bi-person-circle" style="font-size: 4rem;"></i>
-
+                    <div class="mb-3">
+                        <% if(u.getFotoBase64() != null && !u.getFotoBase64().isEmpty()) { %>
+                            <img src="data:image/jpeg;base64,<%= u.getFotoBase64() %>"
+                                 class="rounded-circle shadow"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid white;">
+                        <% } else { %>
+                            <i class="bi bi-person-circle" style="font-size: 4rem;"></i>
+                        <% } %>
+                    </div>
                     <h4 class="fw-bold mt-2">Meu Perfil</h4>
                 </div>
 
-                <!-- BODY -->
                 <div class="card-body p-4">
+                    <form action="${pageContext.request.contextPath}/usuario" method="post" enctype="multipart/form-data">
 
-                    <form action="${pageContext.request.contextPath}/usuario" method="post">
+                        <div class="mb-3">
+                            <label class="fw-bold">Alterar Foto de Perfil</label>
+                            <input type="file" name="foto" class="form-control" accept="image/*">
+                        </div>
 
                         <div class="mb-3">
                             <label class="fw-bold">Usuário</label>
                             <input type="text" name="login" class="form-control"
-                                   value="<%= u.getLogin() %>" required readonly>
-                        </div>
+                                   value="<%= u.getLogin() %>" required readonly> </div>
 
                         <div class="mb-3">
                             <label class="fw-bold">Senha</label>
                             <input type="password" name="senha" class="form-control"
-                                   placeholder="Digite nova senha">
-                        </div>
+                                   placeholder="Digite nova senha"> </div>
 
                         <div class="d-grid mt-4">
-                            <button type="submit"
-                                    class="btn fw-bold py-2"
-                                    style="background-color:#2D6A4F; color:white;">
-                                Atualizar Perfil
+                            <button type="submit" class="btn fw-bold py-2"
+                                    style="background-color:#2D6A4F; color:white;"> Atualizar Perfil
                             </button>
                         </div>
-
                     </form>
-
                 </div>
             </div>
-
         </div>
     </div>
-
 </main>
 
 <c:import url="/includes/footer.jsp" />
