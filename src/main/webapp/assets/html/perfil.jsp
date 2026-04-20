@@ -25,11 +25,15 @@
 
                     <div class="mb-3">
                         <% if(u.getFotoBase64() != null && !u.getFotoBase64().isEmpty()) { %>
-                            <img src="data:image/jpeg;base64,<%= u.getFotoBase64() %>"
+                            <img id="previewFoto" src="data:image/jpeg;base64,<%= u.getFotoBase64() %>"
                                  class="rounded-circle shadow"
                                  style="width: 120px; height: 120px; object-fit: cover; border: 4px solid white;">
                         <% } else { %>
-                            <i class="bi bi-person-circle" style="font-size: 4rem;"></i>
+                            <div id="containerIcone">
+                                <i class="bi bi-person-circle" style="font-size: 4rem;"></i>
+                            </div>
+                            <img id="previewFoto" class="rounded-circle shadow d-none"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid white;">
                         <% } %>
                     </div>
                     <h4 class="fw-bold mt-2">Meu Perfil</h4>
@@ -40,7 +44,7 @@
 
                         <div class="mb-3">
                             <label class="fw-bold">Alterar Foto de Perfil</label>
-                            <input type="file" name="foto" class="form-control" accept="image/*">
+                            <input type="file" id="inputFoto" name="foto" class="form-control" accept="image/*">
                         </div>
 
                         <div class="mb-3">
@@ -64,5 +68,28 @@
         </div>
     </div>
 </main>
+<script>
+    document.getElementById('inputFoto').addEventListener('change', function(event) {
+        const file = event.target.files[0]; // Pega o arquivo selecionado
+        const preview = document.getElementById('previewFoto');
+        const containerIcone = document.getElementById('containerIcone');
+
+        if (file) {
+            const reader = new FileReader();
+
+            // Quando o navegador terminar de ler o arquivo...
+            reader.onload = function(e) {
+                preview.src = e.target.result; // Define o src da img como o conteúdo do arquivo
+                preview.classList.remove('d-none'); // Garante que a imagem apareça
+
+                if (containerIcone) {
+                    containerIcone.classList.add('d-none'); // Esconde o ícone padrão
+                }
+            }
+
+            reader.readAsDataURL(file); // Lê o arquivo como uma URL (Base64 temporário)
+        }
+    });
+</script>
 
 <c:import url="/includes/footer.jsp" />
