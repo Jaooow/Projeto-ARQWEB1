@@ -77,13 +77,13 @@
         if (file) {
             const reader = new FileReader();
 
-            // Quando o navegador terminar de ler o arquivo...
+            // Quando o navegador terminar de ler o arquivo.
             reader.onload = function(e) {
                 preview.src = e.target.result; // Define o src da img como o conteúdo do arquivo
                 preview.classList.remove('d-none'); // Garante que a imagem apareça
 
                 if (containerIcone) {
-                    containerIcone.classList.add('d-none'); // Esconde o ícone padrão
+                    containerIcone.classList.add('d-none');
                 }
             }
 

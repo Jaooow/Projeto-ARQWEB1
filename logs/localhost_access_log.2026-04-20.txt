@@ -9,3 +9,6 @@
 0:0:0:0:0:0:0:1 - - [20/Apr/2026:15:09:10 -0300] "GET /ProjetoARQWEB1_JavaServlet/assets/html/perfil.jsp HTTP/1.1" 200 31804
 0:0:0:0:0:0:0:1 - - [20/Apr/2026:15:09:15 -0300] "GET /ProjetoARQWEB1_JavaServlet/assets/html/perfil.jsp HTTP/1.1" 200 31804
 0:0:0:0:0:0:0:1 - - [20/Apr/2026:15:09:24 -0300] "GET /ProjetoARQWEB1_JavaServlet/index.jsp HTTP/1.1" 200 18920
+0:0:0:0:0:0:0:1 - - [20/Apr/2026:15:11:56 -0300] "GET /ProjetoARQWEB1_JavaServlet/assets/html/perfil.jsp HTTP/1.1" 200 31804
+0:0:0:0:0:0:0:1 - - [20/Apr/2026:15:11:56 -0300] "GET /ProjetoARQWEB1_JavaServlet/assets/img/logo.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [20/Apr/2026:15:11:56 -0300] "GET /ProjetoARQWEB1_JavaServlet/assets/css/style.css HTTP/1.1" 304 -

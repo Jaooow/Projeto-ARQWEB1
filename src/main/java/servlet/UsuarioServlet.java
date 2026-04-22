@@ -27,10 +27,9 @@ public class UsuarioServlet extends HttpServlet {
             Usuario realUser = UsuarioDAO.buscar(sessionUser.getLogin());
 
             if (realUser != null) {
-                // ... (seu código de login e senha já existente)
 
-                // LÓGICA DA IMAGEM
-                Part filePart = request.getPart("foto"); // "foto" deve ser o name do input no JSP
+
+                Part filePart = request.getPart("foto");
 
                 if (filePart != null && filePart.getSize() > 0) {
                     InputStream inputStream = filePart.getInputStream();
