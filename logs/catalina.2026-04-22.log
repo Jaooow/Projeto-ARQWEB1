@@ -80,3 +80,85 @@
 22-Apr-2026 19:07:58.894 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
 22-Apr-2026 19:07:58.904 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
 22-Apr-2026 19:07:58.931 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+22-Apr-2026 19:08:02.337 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.115
+22-Apr-2026 19:08:02.342 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 21 2026 08:17:26 UTC
+22-Apr-2026 19:08:02.343 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.115.0
+22-Apr-2026 19:08:02.343 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+22-Apr-2026 19:08:02.343 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+22-Apr-2026 19:08:02.343 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+22-Apr-2026 19:08:02.343 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+22-Apr-2026 19:08:02.343 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+7-LTS-338
+22-Apr-2026 19:08:02.344 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+22-Apr-2026 19:08:02.344 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1
+22-Apr-2026 19:08:02.344 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Tomcat\apache-tomcat-9.0.115
+22-Apr-2026 19:08:02.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Apr-2026 19:08:02.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+22-Apr-2026 19:08:02.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+22-Apr-2026 19:08:02.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+22-Apr-2026 19:08:02.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Apr-2026 19:08:02.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Tomcat\apache-tomcat-9.0.115
+22-Apr-2026 19:08:02.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1
+22-Apr-2026 19:08:02.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1\temp
+22-Apr-2026 19:08:02.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1\conf\logging.properties
+22-Apr-2026 19:08:02.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Apr-2026 19:08:02.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Users\joaop\AppData\Local\Programs\IntelliJ IDEA\lib\idea_rt.jar=55405
+22-Apr-2026 19:08:02.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+22-Apr-2026 19:08:02.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+22-Apr-2026 19:08:02.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+22-Apr-2026 19:08:02.363 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.3.5] using APR version [1.7.6].
+22-Apr-2026 19:08:02.363 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+22-Apr-2026 19:08:02.363 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+22-Apr-2026 19:08:02.369 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.18 30 Sep 2025]
+22-Apr-2026 19:08:02.763 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+22-Apr-2026 19:08:02.784 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [693] milliseconds
+22-Apr-2026 19:08:02.847 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+22-Apr-2026 19:08:02.848 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.115]
+22-Apr-2026 19:08:02.858 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1\conf\Catalina\localhost\ProjetoARQWEB1_JavaServlet.xml]
+22-Apr-2026 19:08:03.438 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1\conf\Catalina\localhost\ProjetoARQWEB1_JavaServlet.xml] has finished in [576] ms
+22-Apr-2026 19:08:03.444 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+22-Apr-2026 19:08:03.474 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [686] milliseconds
+22-Apr-2026 19:35:11.843 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+22-Apr-2026 19:35:11.848 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+22-Apr-2026 19:35:11.858 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+22-Apr-2026 19:35:11.860 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+22-Apr-2026 19:35:14.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.115
+22-Apr-2026 19:35:14.413 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 21 2026 08:17:26 UTC
+22-Apr-2026 19:35:14.414 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.115.0
+22-Apr-2026 19:35:14.414 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+22-Apr-2026 19:35:14.414 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+22-Apr-2026 19:35:14.414 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+22-Apr-2026 19:35:14.414 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+22-Apr-2026 19:35:14.414 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+7-LTS-338
+22-Apr-2026 19:35:14.415 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+22-Apr-2026 19:35:14.415 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1
+22-Apr-2026 19:35:14.415 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Tomcat\apache-tomcat-9.0.115
+22-Apr-2026 19:35:14.426 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Apr-2026 19:35:14.426 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+22-Apr-2026 19:35:14.426 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+22-Apr-2026 19:35:14.427 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+22-Apr-2026 19:35:14.427 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Apr-2026 19:35:14.427 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Tomcat\apache-tomcat-9.0.115
+22-Apr-2026 19:35:14.427 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1
+22-Apr-2026 19:35:14.427 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1\temp
+22-Apr-2026 19:35:14.427 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1\conf\logging.properties
+22-Apr-2026 19:35:14.428 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Apr-2026 19:35:14.428 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Users\joaop\AppData\Local\Programs\IntelliJ IDEA\lib\idea_rt.jar=52998
+22-Apr-2026 19:35:14.428 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+22-Apr-2026 19:35:14.428 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+22-Apr-2026 19:35:14.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+22-Apr-2026 19:35:14.436 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.3.5] using APR version [1.7.6].
+22-Apr-2026 19:35:14.437 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+22-Apr-2026 19:35:14.437 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+22-Apr-2026 19:35:14.445 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.18 30 Sep 2025]
+22-Apr-2026 19:35:14.847 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+22-Apr-2026 19:35:14.871 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [696] milliseconds
+22-Apr-2026 19:35:14.931 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+22-Apr-2026 19:35:14.931 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.115]
+22-Apr-2026 19:35:14.942 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1\conf\Catalina\localhost\ProjetoARQWEB1_JavaServlet.xml]
+22-Apr-2026 19:35:15.756 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\joaop\OneDrive\Desktop\Projeto-ARQWEB1\conf\Catalina\localhost\ProjetoARQWEB1_JavaServlet.xml] has finished in [811] ms
+22-Apr-2026 19:35:15.760 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+22-Apr-2026 19:35:15.784 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [911] milliseconds
+22-Apr-2026 19:37:38.095 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+22-Apr-2026 19:37:38.100 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+22-Apr-2026 19:37:38.111 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+22-Apr-2026 19:37:38.135 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
