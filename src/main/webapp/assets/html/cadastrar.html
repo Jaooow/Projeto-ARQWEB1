@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fármacos & Cia - Cadastrar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/img/logo.png" class="logo-img me-2">
+                <span>Fármacos & Cia</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menuNav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="vr text-white opacity-25 d-none d-lg-block" style="height:30px;"></div>
+                    <div id="areaLogin"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-header p-4 border-0" style="background-color: #0c795a; color: white; border-radius: 15px 15px 0 0;">
+                    <h4 class="mb-0"><i class="bi bi-plus-circle me-2"></i>Cadastrar Novo Medicamento</h4>
+                </div>
+                <div class="card-body p-4">
+                    <div id="alertaSucesso" class="alert alert-success d-none"></div>
+                    <div id="alertaErro"    class="alert alert-danger  d-none"></div>
+
+                    <form id="formCadastrar">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Nome Comercial</label>
+                                <input type="text" name="nome" class="form-control" placeholder="Ex: Amoxicilina" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Princípio Ativo</label>
+                                <input type="text" name="principioAtivo" class="form-control" placeholder="Ex: Amoxicilina Tri-hidratada" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold">Fabricante</label>
+                                <input type="text" name="fabricante" class="form-control" placeholder="Ex: MedLey" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold">Dosagem</label>
+                                <input type="text" name="dosagem" class="form-control" placeholder="Ex: 500mg" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold">Forma Farmacêutica</label>
+                                <select name="forma" class="form-select">
+                                    <option value="Comprimido">Comprimido</option>
+                                    <option value="Cápsula">Cápsula</option>
+                                    <option value="Solução">Solução/Xarope</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold">Lote</label>
+                                <input type="text" name="lote" class="form-control" placeholder="Ex: 45A8" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold">Data de Validade</label>
+                                <input type="date" name="validade" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-bold">Indicação</label>
+                                <textarea name="indicacao" class="form-control" rows="3"
+                                          placeholder="Descreva brevemente a indicação do medicamento..."></textarea>
+                            </div>
+                            <div class="col-12 d-flex gap-2 mt-4">
+                                <button type="submit" class="btn btn-success px-5 rounded-pill fw-bold"
+                                        style="background-color: #0c795a;">
+                                    Salvar Medicamento
+                                </button>
+                                <a href="listar.html" class="btn btn-outline-secondary px-5 rounded-pill">Cancelar</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="custom-footer mt-5">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="fw-bold mb-3 text-white"><br><i class="bi bi-capsule-pill me-2"></i>Fármacos & Cia</h5>
+                <p class="text-footer-muted">
+                    Sistema de gerenciamento farmacêutico dedicado à organização,
+                    segurança e controle de medicamentos para profissionais da saúde.
+                </p>
+                <div class="social-links d-flex gap-3">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="https://github.com/Jaooow/Projeto-ARQWEB1"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-white fw-bold mb-3">Navegação</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre o Sistema</a></li>
+                    <li><a href="#">Medicamentos</a></li>
+                    <li><a href="#">Relatórios</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-white fw-bold mb-3">Suporte</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h6 class="text-white fw-bold mb-3">Atendimento</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-geo-alt"></i><span>Av. das Farmácias, 123 - Centro</span></li>
+                    <li class="mb-2"><i class="bi bi-envelope"></i><span>suporte@farmacos.com.br</span></li>
+                    <li class="mb-2"><i class="bi bi-telephone"></i><span>(11) 4002-8922</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom py-3">
+        <div class="container text-center">
+            <p class="mb-0 text-footer-muted small">
+                &copy; 2026 Fármacos & Cia. Todos os direitos reservados.
+                <span class="d-block d-md-inline">Desenvolvido por <strong>João Pedro & Marcus</strong></span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/cadastrar.js"></script>
+</body>
+</html>
