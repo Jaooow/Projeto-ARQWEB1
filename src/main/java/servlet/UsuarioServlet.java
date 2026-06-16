@@ -1,7 +1,8 @@
+/*
 package servlet;
 
-import classes.Usuario;
-import classes.UsuarioDAO;
+import classes.model.Usuario;
+import classes.dao.UsuarioDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -59,4 +60,4 @@ public class UsuarioServlet extends HttpServlet {
 
         response.sendRedirect(request.getContextPath() + "/assets/html/perfil.jsp");
     }
-}
+}*/

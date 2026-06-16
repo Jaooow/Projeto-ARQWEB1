@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nome": "Amoxicilina 500mg",
+    "principioAtivo": "Amoxicilina Tri-hidratada",
+    "fabricante": "MedLey",
+    "dosagem": "500mg",
+    "forma": "Cápsula",
+    "lote": "45A8",
+    "validade": "2026-12-31",
+    "indicacao": "Infecções bacterianas",
+    "promocao": true
+  },
+  {
+    "id": 2,
+    "nome": "Dexametasona",
+    "principioAtivo": "Elixir 0,1mg/mL",
+    "fabricante": "EMS",
+    "dosagem": "0,1mg/mL",
+    "forma": "Solução",
+    "lote": "12B2",
+    "validade": "2027-08-15",
+    "indicacao": "Processos inflamatórios",
+    "promocao": false
+  },
+  {
+    "id": 3,
+    "nome": "Dipirona Monoidratada",
+    "principioAtivo": "Dipirona",
+    "fabricante": "Medley",
+    "dosagem": "500mg",
+    "forma": "Comprimido",
+    "lote": "99C3",
+    "validade": "2025-05-20",
+    "indicacao": "Dor e febre",
+    "promocao": true
+  }
+]

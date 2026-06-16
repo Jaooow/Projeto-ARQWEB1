@@ -1,4 +1,4 @@
-package classes;
+package classes.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -15,14 +15,14 @@ public class Medicamento implements Serializable {
     private String dosagem;
     private String forma;
     private String lote;
-    private LocalDate validade;
+    private String validade;
     private String indicacao;
 
     private boolean promocao;
 
     // CONSTRUTOR PADRÃO
     public Medicamento() {
-        this.id = ++idAtual;
+
     }
 
     // CONSTRUTOR PRINCIPAL
@@ -35,20 +35,24 @@ public class Medicamento implements Serializable {
         this.principioAtivo = principioAtivo;
         this.fabricante = fabricante;
         this.lote = lote;
+        this.validade = validade;
         this.indicacao = indicacao;
         this.dosagem = dosagem;
         this.forma = forma;
 
-        if (validade != null && !validade.isEmpty()) {
-            this.validade = LocalDate.parse(validade);
-        }
     }
 
     // Verificacao se está vencido medicamento
     public boolean isVencido() {
-        if (validade == null) return false;
-        return validade.isBefore(LocalDate.now());
+        if (validade == null || validade.isEmpty()) return false;
+        try {
+            return LocalDate.parse(validade).isBefore(LocalDate.now());
+        } catch (Exception e) {
+            return false;
+        }
     }
+
+
 
     // GETTERS E SETTERS
     public boolean isPromocao() {
@@ -63,6 +67,17 @@ public class Medicamento implements Serializable {
     public int getId() {
         return id;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public static void atualizarContadorId(int maiorId) {
+        if (maiorId > idAtual) {
+            idAtual = maiorId;
+        }
+    }
+
 
     public String getNome() {
         return nome;
@@ -112,11 +127,11 @@ public class Medicamento implements Serializable {
         this.lote = lote;
     }
 
-    public LocalDate getValidade() {
+    public String getValidade() {
         return validade;
     }
 
-    public void setValidade(LocalDate validade) {
+    public void setValidade(String validade) {
         this.validade = validade;
     }
 
@@ -129,7 +144,11 @@ public class Medicamento implements Serializable {
     }
 
     public String getValidadeFormatada() {
-        if (validade == null) return "";
-        return validade.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        if (validade == null || validade.isEmpty()) return "";
+        try {
+            return LocalDate.parse(validade).format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        } catch (Exception e) {
+            return validade;
+        }
     }
 }

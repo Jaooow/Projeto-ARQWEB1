@@ -1,4 +1,4 @@
-package servlet;
+package classes.controller;
 
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;

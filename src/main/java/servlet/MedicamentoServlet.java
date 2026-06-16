@@ -1,7 +1,8 @@
+/*
 package servlet;
 
-import classes.Medicamento;
-import classes.MedicamentoDAO;
+import classes.model.Medicamento;
+import classes.dao.MedicamentoDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -133,4 +134,4 @@ public class MedicamentoServlet extends HttpServlet {
 
         response.sendRedirect(request.getContextPath() + "/medicamento?acao=listar");
     }
-}
+}*/
